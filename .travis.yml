@@ -32,7 +32,7 @@ env:
 script:
   - if [[ "$TRAVIS_EVENT_TYPE" != "pull_request" ]]; then
       if [[ "$TEST_SUITE" = "visual_tests" ]]; then
-        npm i --no-save gemini@^4.0.0 gemini-sauce gemini-polyserve &&
+        npm i --no-save gemini@^5.0.0 gemini-sauce gemini-polyserve &&
         gemini test test/visual && gemini test test/visual -c .gemini-chrome.yml;
       fi &&
       if [[ "$TEST_SUITE" != "visual_tests" ]]; then
